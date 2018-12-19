@@ -1,2 +1,2 @@
 # TranslateRuShell (PoC)
-Web reverse shell through translate.ru
+Web reverse shell through translate.ru as proxy
