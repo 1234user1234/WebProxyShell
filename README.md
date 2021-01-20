@@ -1,4 +1,4 @@
-# TranslateRuShell (PoC)
+# WebProxyShell (PoC)
 Web reverse shell through translate.ru as proxy
 
 ## Generate Meterpreter payload for client
